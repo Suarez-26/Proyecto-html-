@@ -1,0 +1,112 @@
+/* Reset General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fondo y Centrado */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Usamos el mismo fondo que en el login para mantener la consistencia */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('/img/pexels-pixabay-159400@2x.png') no-repeat center center/cover;
+}
+
+.main-container {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Tarjeta de Bienvenida */
+.welcome-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 550px; /* Un poco más estrecha que el formulario de login */
+    padding: 50px 40px;
+    border-radius: 40px; /* Bordes redondeados como en la imagen */
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo del Logo */
+.logo-container {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-img {
+    width: 50px; /* Ajusta el tamaño según tu imagen de logo */
+    margin-bottom: 5px;
+}
+
+.logo-text {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #666;
+    font-weight: bold;
+}
+
+/* Texto de "Bienvenido de nuevo" */
+h1 {
+    font-size: 24px;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 35px;
+}
+
+/* Sección del Perfil de Usuario */
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contenedor de la Imagen de Perfil (Círculo) */
+.profile-image-container {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%; /* Esto hace que la imagen sea un círculo perfecto */
+    overflow: hidden; /* Recorta la imagen que se salga del círculo */
+    margin-bottom: 20px;
+    border: 3px solid #fff; /* Opcional: un borde blanco fino */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el círculo sin deformarse */
+}
+
+/* Nombre del Usuario */
+h2 {
+    font-size: 22px;
+    color: #222;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* Rol del Usuario */
+.user-role {
+    font-size: 14px;
+    color: #888;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 480px) {
+    .welcome-card {
+        padding: 35px 25px;
+    }
+    h1 { font-size: 20px; }
+    h2 { font-size: 18px; }
+    .profile-image-container { width: 90px; height: 90px; }
+}
