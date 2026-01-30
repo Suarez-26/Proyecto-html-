@@ -101,12 +101,8 @@ h2 {
     color: #888;
 }
 
-/* Ajustes para pantallas pequeñas */
-@media (max-width: 480px) {
-    .welcome-card {
-        padding: 35px 25px;
-    }
-    h1 { font-size: 20px; }
-    h2 { font-size: 18px; }
-    .profile-image-container { width: 90px; height: 90px; }
+/* Boton de siguiente */
+
+a{
+    text-decoration: none;
 }

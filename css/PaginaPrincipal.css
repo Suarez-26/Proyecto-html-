@@ -1,0 +1,267 @@
+/* --- Configuración General --- */
+/* =====================
+   VARIABLES GLOBALES
+   Colores, fondos y radios reutilizables
+===================== */
+:root {
+  --clr-primary: #ff5500;      /* Color principal (naranja) */
+  --clr-success: #28a745;      /* Verde éxito */
+  --clr-danger: #dc3545;       /* Rojo alerta */
+
+  --text-dark: #333;           /* Texto principal */
+  --text-gray: #666;           /* Texto secundario */
+  --text-light: #999;          /* Texto tenue */
+
+  --bg-white: #fff;            /* Fondo blanco */
+  --bg-light: #f9f9f9;         /* Fondo claro */
+
+  --border: #e0e0e0;           /* Color de bordes */
+  --ring-bg: #eee;             /* Fondo base del progress ring */
+
+  --radius-lg: 30px;           /* Bordes redondeados grandes */
+  --radius-full: 50%;          /* Bordes circulares */
+}
+
+/* =====================
+   RESET BÁSICO
+   Normaliza estilos en todos los navegadores
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;      /* Incluye padding y borde en el tamaño */
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: var(--bg-white);
+  color: var(--text-dark);
+}
+
+a {
+  text-decoration: none;       /* Quita subrayado */
+  color: inherit;              /* Usa el color del contenedor */
+}
+
+/* =====================
+   HEADER SUPERIOR
+===================== */
+.top-header {
+  display: flex;
+  justify-content: space-between; /* Espacia izquierda y derecha */
+  align-items: center;
+  padding: 15px 30px;
+  background: var(--bg-white);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 10px rgba(0,0,0,.05);
+}
+
+/* Contenedores laterales del header */
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;                  /* Espacio entre elementos */
+}
+
+/* Ítems de navegación */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Variante en color principal */
+.nav-item--primary {
+  color: var(--clr-primary);
+}
+
+.brand-logo {
+  height: 35px;
+}
+
+/* Acciones del usuario (iconos, avatar) */
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 18px;
+}
+
+.user-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: var(--radius-full); /* Avatar circular */
+}
+
+/* =====================
+   CONTENEDOR PRINCIPAL
+===================== */
+.dashboard-container {
+  max-width: 1200px;
+  margin: 40px auto;           /* Centrado horizontal */
+  padding: 0 20px;
+}
+
+/* Sección de título */
+.title-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.title-section h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: var(--text-gray);
+}
+
+/* =====================
+   TABLA FLEX DE INDICADORES
+===================== */
+.indicators-table {
+  display: flex;
+  flex-direction: column;      /* Filas verticales */
+  gap: 15px;                   /* Espacio entre tarjetas */
+}
+
+/* Fila base */
+.table-row {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+/* Fila de encabezado */
+.table-row--header {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-gray);
+  padding-bottom: 5px;
+}
+
+/* Fila tipo tarjeta */
+.table-row--card {
+  height: 70px;
+  font-size: 14px;
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 2px 5px rgba(0,0,0,.02);
+}
+
+/* =====================
+   COLUMNAS
+===================== */
+.col {
+  flex: 1;                     /* Tamaño base */
+  padding: 0 10px;
+}
+
+/* Variantes de columnas */
+.col--indicator { flex: 2; font-weight: 600; }
+.col--desc { flex: 2.5; color: var(--text-gray); }
+.col--date,
+.col--freq,
+.col--formula { flex: 1; }
+
+.col--cat { flex: 1; }
+.col--cump,
+.col--area { flex: 1.2; }
+
+/* Menú de acciones */
+.col--menu {
+  flex: .5;
+  text-align: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Corta texto largo con "..." */
+.text-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* =====================
+   PROGRESS RING
+===================== */
+.progress-ring {
+  width: 45px;
+  height: 45px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+  background: var(--ring-bg);  /* Fondo gris */
+}
+
+/* Círculo interno para efecto anillo */
+.progress-ring::after {
+  content: '';
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background: var(--bg-white);
+  border-radius: var(--radius-full);
+}
+
+/* Texto del porcentaje */
+.ring-text {
+  font-size: 12px;
+  font-weight: 700;
+  z-index: 1;
+}
+
+/* Colores del anillo */
+.ring--danger { color: var(--clr-danger); }
+.ring--success { color: var(--clr-success); }
+.ring--primary { color: var(--clr-primary); }
+
+/* Porcentajes usando conic-gradient */
+.p-25 { background: conic-gradient(var(--clr-danger) 25%, var(--ring-bg) 0); }
+.p-31 { background: conic-gradient(var(--clr-danger) 31%, var(--ring-bg) 0); }
+.p-32 { background: conic-gradient(var(--clr-danger) 32%, var(--ring-bg) 0); }
+
+.p-75 { background: conic-gradient(var(--clr-primary) 75%, var(--ring-bg) 0); }
+
+.p-80 { background: conic-gradient(var(--clr-success) 80%, var(--ring-bg) 0); }
+.p-95 { background: conic-gradient(var(--clr-success) 95%, var(--ring-bg) 0); }
+
+/* =====================
+   BOTÓN INFERIOR
+===================== */
+.footer-action {
+  margin: 40px 0 60px;
+  text-align: center;
+}
+
+.btn-primary-lg {
+  padding: 15px 60px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  color: #fff;
+  background: var(--clr-primary);
+  box-shadow: 0 4px 15px rgba(255,85,0,.2);
+  transition: background .2s;  /* Animación hover */
+}
+
+.btn-primary-lg:hover {
+  background: #e04a00;
+}

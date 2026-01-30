@@ -1,212 +1,201 @@
+/* ===============================
+   RESET Y CONFIGURACIÓN BASE
+================================ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* SPLASH CON FONDO */
-.splash {
+html {
+  font-size: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('/img/pexels-pixabay-159400@2x.png') center / cover no-repeat;
+}
+
+/* ===============================
+   SPLASH
+================================ */
+.pantalla-carga {
   position: fixed;
   inset: 0;
-  background: url("/img/pexels-pixabay-159400@2x.png"); /* tu imagen */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
+  background: url("/img/pexels-pixabay-159400@2x.png") center / cover no-repeat;
   display: flex;
-  align-items: center;
+ 
   justify-content: center;
-
-  animation: hideSplash 1s ease forwards;
+  align-items: center;
+  animation: ocultarPantalla 1s ease forwards;
   animation-delay: 3s;
   z-index: 10;
 }
 
-/* LOGO */
-.logo {
-  width: 200px; /* ajusta a tu logo */
-  opacity: 0;
-  animation: logoFromBottom 1.8s ease-out forwards;
-  animation-delay: 0.3s;
-}
-
-/* ANIMACIÓN LOGO */
-@keyframes logoFromBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  80% {
-    opacity: 1;
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-
-/* DESAPARECER SPLASH */
-@keyframes hideSplash {
+@keyframes ocultarPantalla {
   to {
     opacity: 0;
     visibility: hidden;
   }
 }
 
-/* CONTENIDO */
-.content {
+/* ===============================
+   CONTENIDO
+================================ */
+.contenido {
+  width: 100%;
+  padding: clamp(1rem, 4vw, 3rem);
   opacity: 0;
-  padding: 40px;
-  animation: showContent 1s ease forwards;
+  animation: mostrarContenido 1s ease forwards;
   animation-delay: 3.5s;
 }
 
-@keyframes showContent {
-  to {
-    opacity: 1;
-  }
+@keyframes mostrarContenido {
+  to { opacity: 1; }
 }
 
-/* PANEL DE REGINTRO */
-
-/* Configuración General */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* ===============================
+   CAPA DE FONDO
+================================ */
+.capa-fondo {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* Reemplaza esta URL por la imagen de fondo del estadio si la tienes */
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-    url('/img/pexels-pixabay-159400@2x.png') no-repeat center center/cover;
+/* ===============================
+   TARJETA LOGIN
+================================ */
+.tarjeta-login {
+  background: #fff;
+  width: 100%;
+  max-width: 38rem;
+  padding: clamp(1.5rem, 5vw, 3.5rem);
+  border-radius: clamp(1.5rem, 5vw, 3rem);
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,.3);
 }
 
-.background-overlay {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+/* ===============================
+   LOGO
+================================ */
+.contenedor-logo {
+  margin-bottom: 1.5rem;
 }
 
-/* Tarjeta Principal */
-.login-card {
-    background-color: white;
-    width: 100%;
-    max-width: 600px;
-    padding: 50px 60px;
-    border-radius: 50px; /* Bordes muy redondeados como en la imagen */
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+.icono-logo {
+  width: clamp(2.5rem, 6vw, 3.75rem);
+  margin-bottom: .3rem;
 }
 
-/* Logo */
-.logo-container {
-    margin-bottom: 20px;
+.texto-logo {
+  font-size: clamp(.7rem, 2vw, .9rem);
+  letter-spacing: .2rem;
+  color: #555;
+  font-weight: bold;
 }
 
-.logo-icon {
-    width: 60px;
-    margin-bottom: 5px;
-}
-
-.logo-text {
-    font-weight: bold;
-    color: #555;
-    letter-spacing: 2px;
-    font-size: 14px;
-}
-
-/* Textos */
+/* ===============================
+   TEXTOS
+================================ */
 h1 {
-    font-size: 24px;
-    color: #333;
-    font-weight: 500;
-    margin-bottom: 10px;
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
+  color: #333;
+  font-weight: 500;
+  margin-bottom: .8rem;
 }
 
 h1 span {
-    font-weight: 600;
+  font-weight: 600;
 }
 
-.subtitle {
-    font-size: 14px;
-    color: #777;
-    margin-bottom: 30px;
+.subtitulo {
+  font-size: clamp(.8rem, 3vw, .95rem);
+  color: #777;
+  margin-bottom: 2rem;
 }
 
-/* Formulario e Inputs */
+/* ===============================
+   FORMULARIO
+================================ */
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
-.input-group {
-    width: 100%;
-    text-align: left;
-    margin-bottom: 20px;
+.grupo-input {
+  width: 100%;
+  text-align: left;
 }
 
-.input-group label {
-    display: block;
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 8px;
-    margin-left: 5px;
+.grupo-input label {
+  font-size: clamp(.85rem, 2.5vw, 1rem);
+  color: #555;
+  margin-bottom: .4rem;
+  display: block;
 }
 
-.input-group input {
-    width: 100%;
-    padding: 12px 20px;
-    border: 1px solid #ccc;
-    border-radius: 15px; /* Bordes redondeados de los inputs */
-    font-size: 16px;
-    outline: none;
-    transition: border-color 0.3s;
+.grupo-input input {
+  width: 100%;
+  padding: clamp(.6rem, 2.5vw, .9rem) clamp(.8rem, 3vw, 1.2rem);
+  border-radius: 1rem;
+  border: 1px solid #ccc;
+  font-size: clamp(.9rem, 2.5vw, 1rem);
+  outline: none;
 }
 
-.input-group input:focus {
-    border-color: #FF5500;
+.grupo-input input:focus {
+  border-color: #FF5500;
 }
 
-/* Botón */
-.btn-primary {
-    background-color: #FF5500; /* Naranja característico */
-    color: white;
-    border: none;
-    padding: 15px 50px;
-    font-size: 18px;
-    border-radius: 30px;
-    cursor: pointer;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    transition: background-color 0.3s ease;
+/* ===============================
+   BOTÓN
+================================ */
+.boton-principal {
+  margin-top: .5rem;
+  padding: clamp(.8rem, 3vw, 1rem);
+  width: 100%;
+  max-width: 18rem;
+  align-self: center;
+
+  background-color: #FF5500;
+  color: #fff;
+  border-radius: 2rem;
+  font-size: clamp(1rem, 3vw, 1.1rem);
+  text-decoration: none;
+  text-align: center;
+  transition: background-color .3s ease;
 }
 
-.btn-primary:hover {
-    background-color: #e64d00;
+.boton-principal:hover {
+  background-color: #e64d00;
 }
 
-/* Footer */
-.footer-text {
-    font-size: 12px;
-    color: #999;
-    line-height: 1.4;
+/* ===============================
+   FOOTER
+================================ */
+.texto-footer {
+  margin-top: 1.2rem;
+  font-size: clamp(.65rem, 2.5vw, .75rem);
+  color: #999;
+  line-height: 1.4;
 }
 
-/* Responsivo */
-@media (max-width: 480px) {
-    .login-card {
-        padding: 30px 20px;
-        border-radius: 30px;
-    }
+/* ===============================
+   PANTALLAS GRANDES
+================================ */
+@media (min-width: 1200px) {
+  .tarjeta-login {
+    max-width: 42rem;
+  }
 }
