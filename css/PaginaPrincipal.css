@@ -1,71 +1,60 @@
-/* --- Configuración General --- */
-/* =====================
-   VARIABLES GLOBALES
-   Colores, fondos y radios reutilizables
-===================== */
+
 :root {
-  --clr-primary: #ff5500;      /* Color principal (naranja) */
-  --clr-success: #28a745;      /* Verde éxito */
-  --clr-danger: #dc3545;       /* Rojo alerta */
+  --clr-primario: #ff5500;
+  --clr-exito: #28a745;
+  --clr-peligro: #dc3545;
 
-  --text-dark: #333;           /* Texto principal */
-  --text-gray: #666;           /* Texto secundario */
-  --text-light: #999;          /* Texto tenue */
+  --texto-oscuro: #333;
+  --texto-gris: #666;
+  --texto-claro: #999;
 
-  --bg-white: #fff;            /* Fondo blanco */
-  --bg-light: #f9f9f9;         /* Fondo claro */
+  --fondo-blanco: #fff;
+  --fondo-claro: #f9f9f9;
 
-  --border: #e0e0e0;           /* Color de bordes */
-  --ring-bg: #eee;             /* Fondo base del progress ring */
+  --borde: #e0e0e0;
+  --fondo-anillo: #eee;
 
-  --radius-lg: 30px;           /* Bordes redondeados grandes */
-  --radius-full: 50%;          /* Bordes circulares */
+  --radio-grande: 30px;
+  --radio-circular: 50%;
 }
 
-/* =====================
-   RESET BÁSICO
-   Normaliza estilos en todos los navegadores
-===================== */
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;      /* Incluye padding y borde en el tamaño */
+  box-sizing: border-box;
   font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 body {
-  background: var(--bg-white);
-  color: var(--text-dark);
+  background: var(--fondo-blanco);
+  color: var(--texto-oscuro);
 }
 
 a {
-  text-decoration: none;       /* Quita subrayado */
-  color: inherit;              /* Usa el color del contenedor */
+  text-decoration: none;
+  color: inherit;
 }
 
-/* =====================
-   HEADER SUPERIOR
-===================== */
-.top-header {
+/* ================= HEADER ================= */
+.encabezado-superior {
   display: flex;
-  justify-content: space-between; /* Espacia izquierda y derecha */
+  justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background: var(--bg-white);
-  border-bottom: 1px solid var(--border);
+  background: var(--fondo-blanco);
+  border-bottom: 1px solid var(--borde);
   box-shadow: 0 2px 10px rgba(0,0,0,.05);
 }
 
-/* Contenedores laterales del header */
-.header-left,
-.header-right {
+.encabezado-izquierdo,
+.encabezado-derecho {
   display: flex;
   align-items: center;
-  gap: 25px;                  /* Espacio entre elementos */
+  gap: 25px;
 }
 
-/* Ítems de navegación */
-.nav-item {
+.item-navegacion {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -73,195 +62,520 @@ a {
   font-weight: 600;
 }
 
-/* Variante en color principal */
-.nav-item--primary {
-  color: var(--clr-primary);
+.item-navegacion.naranja {
+  color: var(--clr-primario);
 }
 
-.brand-logo {
+.logo-marca {
   height: 35px;
 }
 
-/* Acciones del usuario (iconos, avatar) */
-.user-actions {
+.acciones-usuario {
   display: flex;
   align-items: center;
   gap: 20px;
   font-size: 18px;
 }
 
-.user-avatar {
+.avatar-usuario {
   width: 35px;
   height: 35px;
-  border-radius: var(--radius-full); /* Avatar circular */
+  border-radius: var(--radio-circular);
 }
 
-/* =====================
-   CONTENEDOR PRINCIPAL
-===================== */
-.dashboard-container {
+/* ================= DASHBOARD ================= */
+.contenedor-dashboard {
   max-width: 1200px;
-  margin: 40px auto;           /* Centrado horizontal */
+  margin: 40px auto;
   padding: 0 20px;
 }
 
-/* Sección de título */
-.title-section {
+.seccion-titulo {
   text-align: center;
   margin-bottom: 40px;
 }
 
-.title-section h1 {
+.seccion-titulo h1 {
   font-size: 28px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-.subtitle {
+.subtitulo {
   font-size: 15px;
-  color: var(--text-gray);
+  color: var(--texto-gris);
 }
 
-/* =====================
-   TABLA FLEX DE INDICADORES
-===================== */
-.indicators-table {
+/* ================= TABLA ================= */
+.tabla-indicadores {
   display: flex;
-  flex-direction: column;      /* Filas verticales */
-  gap: 15px;                   /* Espacio entre tarjetas */
+  flex-direction: column;
+  gap: 15px;
 }
 
-/* Fila base */
-.table-row {
+.fila-tabla {
   display: flex;
   align-items: center;
   padding: 15px 20px;
 }
 
-/* Fila de encabezado */
-.table-row--header {
+.fila-tabla.encabezado {
   font-size: 14px;
   font-weight: 700;
-  color: var(--text-gray);
-  padding-bottom: 5px;
+  color: var(--texto-gris);
 }
 
-/* Fila tipo tarjeta */
-.table-row--card {
+.fila-tabla.tarjeta-indicador {
   height: 70px;
-  font-size: 14px;
-  background: var(--bg-white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
+  background: var(--fondo-blanco);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-grande);
   box-shadow: 0 2px 5px rgba(0,0,0,.02);
 }
 
-/* =====================
-   COLUMNAS
-===================== */
-.col {
-  flex: 1;                     /* Tamaño base */
+.columna {
+  flex: 1;
   padding: 0 10px;
 }
 
-/* Variantes de columnas */
-.col--indicator { flex: 2; font-weight: 600; }
-.col--desc { flex: 2.5; color: var(--text-gray); }
-.col--date,
-.col--freq,
-.col--formula { flex: 1; }
+.columna-indicador { flex: 2; font-weight: 600; }
+.columna-descripcion { flex: 2.5; color: var(--texto-gris); }
+.columna-fecha,
+.columna-frecuencia,
+.columna-formula { flex: 1; }
+.columna-categoria { flex: 1; }
+.columna-cumplimiento,
+.columna-area { flex: 1.2; }
 
-.col--cat { flex: 1; }
-.col--cump,
-.col--area { flex: 1.2; }
-
-/* Menú de acciones */
-.col--menu {
+.columna-menu {
   flex: .5;
   text-align: right;
   font-size: 20px;
   cursor: pointer;
 }
 
-.text-center {
+.centrado {
   text-align: center;
 }
 
-/* Corta texto largo con "..." */
-.text-truncate {
+.texto-cortado {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* =====================
-   PROGRESS RING
-===================== */
-.progress-ring {
+/* ================= ANILLO ================= */
+.anillo-progreso {
   width: 45px;
   height: 45px;
-  border-radius: var(--radius-full);
+  border-radius: var(--radio-circular);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
   position: relative;
-  background: var(--ring-bg);  /* Fondo gris */
+  background: var(--fondo-anillo);
 }
 
-/* Círculo interno para efecto anillo */
-.progress-ring::after {
+.anillo-progreso::after {
   content: '';
   position: absolute;
   width: 35px;
   height: 35px;
-  background: var(--bg-white);
-  border-radius: var(--radius-full);
+  background: var(--fondo-blanco);
+  border-radius: var(--radio-circular);
 }
 
-/* Texto del porcentaje */
-.ring-text {
+.texto-anillo {
   font-size: 12px;
   font-weight: 700;
   z-index: 1;
 }
 
-/* Colores del anillo */
-.ring--danger { color: var(--clr-danger); }
-.ring--success { color: var(--clr-success); }
-.ring--primary { color: var(--clr-primary); }
+.anillo-rojo { color: var(--clr-peligro); }
+.anillo-verde { color: var(--clr-exito); }
+.anillo-naranja { color: var(--clr-primario); }
 
-/* Porcentajes usando conic-gradient */
-.p-25 { background: conic-gradient(var(--clr-danger) 25%, var(--ring-bg) 0); }
-.p-31 { background: conic-gradient(var(--clr-danger) 31%, var(--ring-bg) 0); }
-.p-32 { background: conic-gradient(var(--clr-danger) 32%, var(--ring-bg) 0); }
 
-.p-75 { background: conic-gradient(var(--clr-primary) 75%, var(--ring-bg) 0); }
-
-.p-80 { background: conic-gradient(var(--clr-success) 80%, var(--ring-bg) 0); }
-.p-95 { background: conic-gradient(var(--clr-success) 95%, var(--ring-bg) 0); }
-
-/* =====================
-   BOTÓN INFERIOR
-===================== */
-.footer-action {
+/* ================= BOTÓN ================= */
+.accion-footer {
   margin: 40px 0 60px;
   text-align: center;
 }
 
-.btn-primary-lg {
+.boton-principal-grande {
   padding: 15px 60px;
   font-size: 18px;
   font-weight: 600;
   border: none;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radio-grande);
   cursor: pointer;
   color: #fff;
-  background: var(--clr-primary);
+  background: var(--clr-primario);
   box-shadow: 0 4px 15px rgba(255,85,0,.2);
-  transition: background .2s;  /* Animación hover */
+
 }
 
-.btn-primary-lg:hover {
+.boton-principal-grande:hover {
   background: #e04a00;
 }
+
+
+/* SECCION DE VETANAS */
+
+/* --- LÓGICA DEL MODAL (SIN JS) --- */
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo oscurecido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    
+    /* Estado inicial: oculto */
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Cuando el ID "modal-add" aparece en la URL */
+.modal-container:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* --- DISEÑO DE LA TARJETA --- */
+.modal-card {
+    background: white;
+    width: 90%;
+    max-width: 550px;
+    padding: 30px;
+    border-radius: 25px; /* Bordes redondeados como en tu imagen */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.btn-close {
+    text-decoration: none;
+    font-size: 2rem;
+    color: #999;
+    transition: color 0.2s;
+}
+
+.btn-close:hover { color: #FF5722; }
+
+/* --- DISEÑO DEL FORMULARIO  --- */
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #FF5722; /* El naranja de tu marca */
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* --- BOTÓN NARANJA --- */
+.modal-footer {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.btn-submit {
+    background-color: #FF5722;
+    color: white;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background-color: #E64A19;
+    transform: translateY(-2px);
+}
+
+/* Capa invisible para cerrar al hacer clic fuera */
+.modal-close-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+}
+
+
+/* REPORTES*/
+
+/* Estructura del Overlay de Reporte */
+.report-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f4f7f6; /* Fondo gris muy claro como tu app */
+    z-index: 2000;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.report-overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.report-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Cabecera */
+.report-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.btn-export {
+    background: white;
+    border: 2px solid #FF5722;
+    color: #FF5722;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-close-report {
+    font-size: 40px;
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px;
+}
+
+/* KPIs */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.kpi-card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.kpi-title { display: block; color: #777; font-size: 0.9rem; margin-bottom: 10px; }
+.kpi-value { font-size: 2rem; font-weight: bold; }
+.kpi-value.orange { color: #FF5722; }
+
+/* Gráficos */
+.charts-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 20px;
+}
+
+.chart-card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.chart-card.center { text-align: center; }
+
+/* Gráfico de Barras CSS */
+.bar-item { margin-bottom: 15px; }
+.bar-item label { display: block; margin-bottom: 5px; font-size: 0.85rem; }
+.bar-container { background: #eee; border-radius: 10px; height: 25px; overflow: hidden; }
+.bar-fill { 
+    background: #FF5722; 
+    height: 100%; 
+    color: white; 
+    font-size: 0.7rem; 
+    display: flex; 
+    align-items: center; 
+    padding-left: 10px;
+}
+
+/* Gráfico Circular (Pie Chart) solo con CSS */
+.css-pie {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #FF5722 0% 40%,      /* Alta: 40% */
+        #FF9800 40% 75%,     /* Media: 35% */
+        #FFCC80 75% 100%     /* Baja: 25% */
+    );
+    margin: 20px auto;
+}
+
+/* AYUDA*/
+
+/* Overlay de Ayuda (Igual que Reportar) */
+.help-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f4f7f6;
+    z-index: 3000;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.help-overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.help-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.help-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.btn-close-help {
+    font-size: 40px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Buscador */
+.search-box { margin-bottom: 40px; }
+.search-box input {
+    width: 100%;
+    padding: 15px 25px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* LÓGICA DEL ACORDEÓN (Checkbox Hack) */
+.faq-item {
+    background: white;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.faq-toggle { display: none; } /* Ocultamos el checkbox */
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #333;
+    transition: background 0.3s;
+}
+
+.faq-question:hover { background: #fffcfb; }
+
+.faq-icon {
+    color: #FF5722;
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+
+/* Respuesta oculta por defecto */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s;
+    padding: 0 20px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Cuando el checkbox está activado, mostramos la respuesta */
+.faq-toggle:checked ~ .faq-answer {
+    max-height: 200px; /* Suficiente para el contenido */
+    padding: 10px 20px 20px 20px;
+}
+
+/* Rotar el icono cuando se abre */
+.faq-toggle:checked ~ .faq-question .faq-icon {
+    transform: rotate(45deg);
+}
+
+.help-footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #888;
+}
+
+.help-footer a { color: #FF5722; text-decoration: none; font-weight: bold; }
