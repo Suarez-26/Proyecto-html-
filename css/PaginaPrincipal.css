@@ -579,3 +579,113 @@ a {
 }
 
 .help-footer a { color: #FF5722; text-decoration: none; font-weight: bold; }
+
+/*SECCION DE ELIMINAR */
+
+/* Overlay principal */
+.delete-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff; /* Fondo oscuro para diferenciar la "Zona de Peligro" */
+    z-index: 4000;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    color: rgb(0, 0, 0);
+}
+
+.delete-overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.delete-container {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.delete-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.btn-close {
+    text-decoration: none;
+    font-size: 2rem;
+    color: #999;
+    transition: color 0.2s;
+}
+
+.btn-close:hover { color: #FF5722; }
+
+/* Lista de eliminación */
+.delete-item {
+    background: #ffffff;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    border-left: 5px solid #ff5500; /* Línea roja de peligro */
+}
+
+.item-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.item-name { display: block; font-weight: bold; font-size: 1.1rem; }
+.item-area { font-size: 0.8rem; color: #aaa; }
+
+.btn-trash {
+    background: #ff5500;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Lógica de Simulación de Borrado */
+.hide-check { display: none; }
+
+.delete-msg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ff5500;
+    font-weight: bold;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+}
+
+/* Cuando se marca el checkbox, el mensaje sube y el contenido se oculta */
+.hide-check:checked ~ .item-content {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.hide-check:checked ~ .delete-msg {
+    transform: translateY(0);
+}
+
+.delete-footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #666;
+}

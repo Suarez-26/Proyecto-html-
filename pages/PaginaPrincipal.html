@@ -1,296 +1,349 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PANEL INDICARORES - KAIRO MEDIA</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/css/PaginaPrincipal.css">
-</head>
-<body>
+  <!DOCTYPE html>
+  <html lang="es">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>PANEL INDICARORES - KAIRO MEDIA</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <link rel="stylesheet" href="/css/PaginaPrincipal.css">
+  </head>
+  <body>
 
-    <header class="encabezado-superior">
-    <div class="encabezado-izquierdo">
-        <a href="#modal-add" class="item-navegacion naranja"><img src="/img/Group 3.svg" alt="">Añadir</a>
-        <a href="#" class="item-navegacion naranja"><img src="/img/Icon open-reload.svg" alt=""> Refrescar</a>
-        <a href="#" class="item-navegacion naranja"><img src="/img/Icon material-delete-forever.svg" alt=""> Eliminar</a>
+      <header class="encabezado-superior">
+      <div class="encabezado-izquierdo">
+          <a href="#modal-add" class="item-navegacion naranja"><img src="/img/Group 3.svg" alt="">Añadir</a>
+          <a href="#" class="item-navegacion naranja"><img src="/img/Icon open-reload.svg" alt=""> Refrescar</a>
+          <a href="#seccion-eliminar" class="item-navegacion naranja"><img src="/img/Icon material-delete-forever.svg" alt=""> Eliminar</a>
+      </div>
+
+    <div class="encabezado-centro">
+      <img src="/img/kario sin kairo.svg" alt="Kario Logo" class="logo-marca">
     </div>
 
-  <div class="encabezado-centro">
-    <img src="/img/kario sin kairo.svg" alt="Kario Logo" class="logo-marca">
-  </div>
+    <div class="encabezado-derecho">
+      <a href="#seccion-reportar" class="item-navegacion naranja"><img src="/img/Icon material-bug-report.svg" alt=""> Reportar</a>
+      <a href="#seccion-ayuda" class="item-navegacion naranja"><i class="fas fa-question-circle"></i> Ayuda</a>
 
-  <div class="encabezado-derecho">
-    <a href="#seccion-reportar" class="item-navegacion naranja"><img src="/img/Icon material-bug-report.svg" alt=""> Reportar</a>
-    <a href="#seccion-ayuda" class="item-navegacion naranja"><i class="fas fa-question-circle"></i> Ayuda</a>
-
-    <div class="acciones-usuario">
-      <a href="#"><i class="fas fa-cog"></i></a>
-      <a href="#"><i class="fas fa-bell"></i></a>
-      <img src="/img/pp@2x.png" alt="User Profile" class="avatar-usuario">
+      <div class="acciones-usuario">
+        <a href="#"><i class="fas fa-cog"></i></a>
+        <a href="#"><i class="fas fa-bell"></i></a>
+        <img src="/img/pp@2x.png" alt="User Profile" class="avatar-usuario">
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<main class="contenedor-dashboard">
+  <main class="contenedor-dashboard">
 
-  <section class="seccion-titulo">
-    <h1>Panel de Indicadores</h1>
-    <p class="subtitulo">
-      Aqui puedes visualizar los indicadores propuestos y añadidos por tu equipo de trabajo.
-    </p>
-  </section>
-
-    <section class="tabla-indicadores">
-
-    <div class="fila-tabla encabezado">
-        <div class="columna columna-indicador">Indicador</div>
-        <div class="columna columna-descripcion">Descripción</div>
-        <div class="columna columna-categoria">Categoría</div>
-        <div class="columna columna-fecha">Fecha de Inicio</div>
-        <div class="columna columna-fecha">Fecha de Terminación</div>
-        <div class="columna columna-formula">Fórmula</div>
-        <div class="columna columna-frecuencia">Frecuencia</div>
-        <div class="columna columna-cumplimiento centrado">Cumplimiento</div>
-        <div class="columna columna-area centrado">Área</div>
-        <div class="columna columna-menu"></div>
-    </div>
-
-    <div class="fila-tabla tarjeta-indicador">
-        <div class="columna columna-indicador">Modelado 3D</div>
-        <div class="columna columna-descripcion texto-cortado">Interés por dise........</div>
-        <div class="columna columna-categoria">Baja</div>
-        <div class="columna columna-fecha">12/05/21</div>
-        <div class="columna columna-fecha">12/12/21</div>
-        <div class="columna columna-formula">Met.Ágil</div>
-        <div class="columna columna-frecuencia">1/4</div>
-        <div class="columna columna-cumplimiento centrado">
-        <div class="anillo-progreso anillo-rojo p-31">
-            <span class="texto-anillo">31%</span>
-        </div>
-        </div>
-        <div class="columna columna-area centrado">Marketing</div>
-        <div class="columna columna-menu"><i class="fas fa-bars icono-menu"></i></div>
-    </div>
-
-    <div class="fila-tabla tarjeta-indicador">
-        <div class="columna columna-indicador">Modelado 3D</div>
-        <div class="columna columna-descripcion texto-cortado">Interés por dise........</div>
-        <div class="columna columna-categoria">Baja</div>
-        <div class="columna columna-fecha">12/05/21</div>
-        <div class="columna columna-fecha">12/12/21</div>
-        <div class="columna columna-formula">Met.Ágil</div>
-        <div class="columna columna-frecuencia">1/4</div>
-        <div class="columna columna-cumplimiento centrado">
-        <div class="anillo-progreso anillo-rojo p-31">
-            <span class="texto-anillo">31%</span>
-        </div>
-        </div>
-        <div class="columna columna-area centrado">Marketing</div>
-        <div class="columna columna-menu"><i class="fas fa-bars icono-menu"></i></div>
-    </div>
-
-    <!-- Las demás filas siguen exactamente el mismo patrón -->
+    <section class="seccion-titulo">
+      <h1>Panel de Indicadores</h1>
+      <p class="subtitulo">
+        Aqui puedes visualizar los indicadores propuestos y añadidos por tu equipo de trabajo.
+      </p>
     </section>
 
-  <div class="accion-footer">
-    <button class="boton-principal-grande">Añadir Elementos</button>
+      <section class="tabla-indicadores">
+
+      <div class="fila-tabla encabezado">
+          <div class="columna columna-indicador">Indicador</div>
+          <div class="columna columna-descripcion">Descripción</div>
+          <div class="columna columna-categoria">Categoría</div>
+          <div class="columna columna-fecha">Fecha de Inicio</div>
+          <div class="columna columna-fecha">Fecha de Terminación</div>
+          <div class="columna columna-formula">Fórmula</div>
+          <div class="columna columna-frecuencia">Frecuencia</div>
+          <div class="columna columna-cumplimiento centrado">Cumplimiento</div>
+          <div class="columna columna-area centrado">Área</div>
+          <div class="columna columna-menu"></div>
+      </div>
+
+      <div class="fila-tabla tarjeta-indicador">
+          <div class="columna columna-indicador">Modelado 3D</div>
+          <div class="columna columna-descripcion texto-cortado">Interés por dise........</div>
+          <div class="columna columna-categoria">Baja</div>
+          <div class="columna columna-fecha">12/05/21</div>
+          <div class="columna columna-fecha">12/12/21</div>
+          <div class="columna columna-formula">Met.Ágil</div>
+          <div class="columna columna-frecuencia">1/4</div>
+          <div class="columna columna-cumplimiento centrado">
+          <div class="anillo-progreso anillo-rojo p-31">
+              <span class="texto-anillo">31%</span>
+          </div>
+          </div>
+          <div class="columna columna-area centrado">Marketing</div>
+          <div class="columna columna-menu"><i class="fas fa-bars icono-menu"></i></div>
+      </div>
+
+      <div class="fila-tabla tarjeta-indicador">
+          <div class="columna columna-indicador">Modelado 3D</div>
+          <div class="columna columna-descripcion texto-cortado">Interés por dise........</div>
+          <div class="columna columna-categoria">Baja</div>
+          <div class="columna columna-fecha">12/05/21</div>
+          <div class="columna columna-fecha">12/12/21</div>
+          <div class="columna columna-formula">Met.Ágil</div>
+          <div class="columna columna-frecuencia">1/4</div>
+          <div class="columna columna-cumplimiento centrado">
+          <div class="anillo-progreso anillo-rojo p-31">
+              <span class="texto-anillo">31%</span>
+          </div>
+          </div>
+          <div class="columna columna-area centrado">Marketing</div>
+          <div class="columna columna-menu"><i class="fas fa-bars icono-menu"></i></div>
+      </div>
+
+      <!-- Las demás filas siguen exactamente el mismo patrón -->
+      </section>
+
+    <div class="accion-footer">
+      <button class="boton-principal-grande">Añadir Elementos</button>
+    </div>
+
+  </main>
+
+  <!-- SECCION DE VENTANAS -->
+
+  <div id="modal-add" class="modal-container">
+      <a href="#" class="modal-close-overlay"></a> <div class="modal-card">
+          <div class="modal-header">
+              <h2>Añadir Nuevo Indicador</h2>
+              <a href="#" class="btn-close">&times;</a>
+          </div>
+
+          <form class="add-form">
+              <div class="form-group">
+                  <label>Nombre del Indicador</label>
+                  <input type="text" placeholder="Ej: Modelado 3D" required>
+              </div>
+
+              <div class="form-group">
+                  <label>Descripción</label>
+                  <textarea placeholder="Breve descripción del objetivo..." rows="3"></textarea>
+              </div>
+
+              <div class="form-row">
+                  <div class="form-group">
+                      <label>Categoría</label>
+                      <select>
+                          <option>Baja</option>
+                          <option>Media</option>
+                          <option>Alta</option>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                      <label>Área</label>
+                      <select>
+                          <option>Marketing</option>
+                          <option>Diseño</option>
+                          <option>Developers</option>
+                          <option>Gerencia</option>
+                      </select>
+                  </div>
+              </div>
+
+              <div class="form-row">
+                  <div class="form-group">
+                      <label>Fecha de Inicio</label>
+                      <input type="date">
+                  </div>
+                  <div class="form-group">
+                      <label>Fecha de Terminación</label>
+                      <input type="date">
+                  </div>
+              </div>
+
+              <div class="form-row">
+                  <div class="form-group">
+                      <label>Fórmula</label>
+                      <input type="text" placeholder="Met.Ágil">
+                  </div>
+                  <div class="form-group">
+                      <label>Frecuencia</label>
+                      <input type="text" placeholder="1/4">
+                  </div>
+                  <div class="form-group">
+                      <label>Meta %</label>
+                      <input type="number" placeholder="100">
+                  </div>
+              </div>
+
+              <div class="modal-footer">
+                  <button type="submit" class="btn-submit">Guardar Indicador</button>
+              </div>
+          </form>
+      </div>
+  </div>
+              <!--  REPORTAR  -->
+  <div id="seccion-reportar" class="report-overlay">
+      <div class="report-container">
+          <div class="report-header">
+              <div>
+                  <h1>Reporte de Indicadores</h1>
+                  <p>Resumen general del cumplimiento por áreas</p>
+              </div>
+              <div class="report-actions">
+                  <button class="btn-export">Exportar PDF</button>
+                  <a href="#" class="btn-close-report">&times;</a>
+              </div>
+          </div>
+
+          <div class="kpi-grid">
+              <div class="kpi-card">
+                  <span class="kpi-title">Total Indicadores</span>
+                  <span class="kpi-value">24</span>
+              </div>
+              <div class="kpi-card">
+                  <span class="kpi-title">Cumplimiento Promedio</span>
+                  <span class="kpi-value orange">68%</span>
+              </div>
+              <div class="kpi-card">
+                  <span class="kpi-title">Áreas Activas</span>
+                  <span class="kpi-value">5</span>
+              </div>
+          </div>
+
+          <div class="charts-grid">
+              <div class="chart-card">
+                  <h3>Cumplimiento por Área</h3>
+                  <div class="bar-chart">
+                      <div class="bar-item">
+                          <label>Marketing</label>
+                          <div class="bar-container"><div class="bar-fill" style="width: 85%;">85%</div></div>
+                      </div>
+                      <div class="bar-item">
+                          <label>Diseño</label>
+                          <div class="bar-container"><div class="bar-fill" style="width: 40%;">40%</div></div>
+                      </div>
+                      <div class="bar-item">
+                          <label>Developers</label>
+                          <div class="bar-container"><div class="bar-fill" style="width: 95%;">95%</div></div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="chart-card center">
+                  <h3>Distribución de Prioridad</h3>
+                  <div class="css-pie"></div>
+                  <div class="pie-legend">
+                      <span><i style="background: #FF5722;"></i> Alta</span>
+                      <span><i style="background: #FF9800;"></i> Media</span>
+                      <span><i style="background: #FFCC80;"></i> Baja</span>
+                  </div>
+              </div>
+          </div>
+      </div>
   </div>
 
-</main>
 
-<!-- SECCION DE VENTANAS -->
+  <div id="seccion-ayuda" class="help-overlay">
+      <div class="help-container">
+          <div class="help-header">
+              <h1>Centro de Ayuda</h1>
+              <a href="#" class="btn-close-help">&times;</a>
+          </div>
 
-<div id="modal-add" class="modal-container">
-    <a href="#" class="modal-close-overlay"></a> <div class="modal-card">
-        <div class="modal-header">
-            <h2>Añadir Nuevo Indicador</h2>
-            <a href="#" class="btn-close">&times;</a>
-        </div>
+          <div class="search-box">
+              <input type="text" placeholder="¿En qué podemos ayudarte?">
+          </div>
 
-        <form class="add-form">
-            <div class="form-group">
-                <label>Nombre del Indicador</label>
-                <input type="text" placeholder="Ej: Modelado 3D" required>
-            </div>
+          <div class="faq-list">
+              
+              <div class="faq-item">
+                  <input type="checkbox" id="faq-1" class="faq-toggle">
+                  <label for="faq-1" class="faq-question">
+                      ¿Cómo puedo añadir un nuevo indicador?
+                      <span class="faq-icon">+</span>
+                  </label>
+                  <div class="faq-answer">
+                      <p>Para añadir un indicador, haz clic en el botón naranja <strong>"+ Añadir"</strong> en la barra superior. Se abrirá un formulario donde podrás ingresar el nombre, descripción, fechas y área responsable.</p>
+                  </div>
+              </div>
 
-            <div class="form-group">
-                <label>Descripción</label>
-                <textarea placeholder="Breve descripción del objetivo..." rows="3"></textarea>
-            </div>
+              <div class="faq-item">
+                  <input type="checkbox" id="faq-2" class="faq-toggle">
+                  <label for="faq-2" class="faq-question">
+                      ¿Qué significan los colores en la columna Cumplimiento?
+                      <span class="faq-icon">+</span>
+                  </label>
+                  <div class="faq-answer">
+                      <p>Los colores representan el estado de avance: 
+                          <br>• <span style="color: #4CAF50;">Verde</span>: Cumplimiento óptimo (80% - 100%).
+                          <br>• <span style="color: #FF9800;">Naranja</span>: En progreso (50% - 79%).
+                          <br>• <span style="color: #f44336;">Rojo</span>: Atención requerida (menos del 50%).
+                      </p>
+                  </div>
+              </div>
 
-            <div class="form-row">
-                <div class="form-group">
-                    <label>Categoría</label>
-                    <select>
-                        <option>Baja</option>
-                        <option>Media</option>
-                        <option>Alta</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Área</label>
-                    <select>
-                        <option>Marketing</option>
-                        <option>Diseño</option>
-                        <option>Developers</option>
-                        <option>Gerencia</option>
-                    </select>
-                </div>
-            </div>
+              <div class="faq-item">
+                  <input type="checkbox" id="faq-3" class="faq-toggle">
+                  <label for="faq-3" class="faq-question">
+                      ¿Cómo exportar el reporte a PDF?
+                      <span class="faq-icon">+</span>
+                  </label>
+                  <div class="faq-answer">
+                      <p>Ve a la sección <strong>"Reportar"</strong> en el menú superior. Allí encontrarás un botón blanco con borde naranja que dice "Exportar PDF" en la esquina superior derecha.</p>
+                  </div>
+              </div>
 
-            <div class="form-row">
-                <div class="form-group">
-                    <label>Fecha de Inicio</label>
-                    <input type="date">
-                </div>
-                <div class="form-group">
-                    <label>Fecha de Terminación</label>
-                    <input type="date">
-                </div>
-            </div>
+          </div>
 
-            <div class="form-row">
-                <div class="form-group">
-                    <label>Fórmula</label>
-                    <input type="text" placeholder="Met.Ágil">
-                </div>
-                <div class="form-group">
-                    <label>Frecuencia</label>
-                    <input type="text" placeholder="1/4">
-                </div>
-                <div class="form-group">
-                    <label>Meta %</label>
-                    <input type="number" placeholder="100">
-                </div>
-            </div>
+          <div class="help-footer">
+              <p>¿No encontraste lo que buscabas? <a href="mailto:soporte@tuweb.com">Contactar a soporte</a></p>
+          </div>
+      </div>
+  </div>
 
-            <div class="modal-footer">
-                <button type="submit" class="btn-submit">Guardar Indicador</button>
-            </div>
-        </form>
-    </div>
-</div>
-            <!--  REPORTAR  -->
-<div id="seccion-reportar" class="report-overlay">
-    <div class="report-container">
-        <div class="report-header">
-            <div>
-                <h1>Reporte de Indicadores</h1>
-                <p>Resumen general del cumplimiento por áreas</p>
-            </div>
-            <div class="report-actions">
-                <button class="btn-export">Exportar PDF</button>
-                <a href="#" class="btn-close-report">&times;</a>
-            </div>
-        </div>
+  <!--SECCION DE ELIMINAR--> 
 
-        <div class="kpi-grid">
-            <div class="kpi-card">
-                <span class="kpi-title">Total Indicadores</span>
-                <span class="kpi-value">24</span>
-            </div>
-            <div class="kpi-card">
-                <span class="kpi-title">Cumplimiento Promedio</span>
-                <span class="kpi-value orange">68%</span>
-            </div>
-            <div class="kpi-card">
-                <span class="kpi-title">Áreas Activas</span>
-                <span class="kpi-value">5</span>
-            </div>
-        </div>
+  <div id="seccion-eliminar" class="delete-overlay">
+      <div class="delete-container">
+          <div class="delete-header">
+              <div>
+                  <h1>Gestión de Indicadores</h1>
+                  <p>Selecciona los elementos que deseas dar de baja del panel.</p>
+              </div>
+              <a href="#" class="btn-close">&times;</a>
+          </div>
 
-        <div class="charts-grid">
-            <div class="chart-card">
-                <h3>Cumplimiento por Área</h3>
-                <div class="bar-chart">
-                    <div class="bar-item">
-                        <label>Marketing</label>
-                        <div class="bar-container"><div class="bar-fill" style="width: 85%;">85%</div></div>
-                    </div>
-                    <div class="bar-item">
-                        <label>Diseño</label>
-                        <div class="bar-container"><div class="bar-fill" style="width: 40%;">40%</div></div>
-                    </div>
-                    <div class="bar-item">
-                        <label>Developers</label>
-                        <div class="bar-container"><div class="bar-fill" style="width: 95%;">95%</div></div>
-                    </div>
-                </div>
-            </div>
+          <div class="delete-list">
+              <div class="delete-item">
+                  <input type="checkbox" id="del-1" class="hide-check">
+                  <div class="item-content">
+                      <div class="item-info">
+                          <span class="item-name">Modelado 3D</span>
+                          <span class="item-area">Marketing</span>
+                      </div>
+                      <label for="del-1" class="btn-trash">Eliminar</label>
+                  </div>
+                  <div class="delete-msg">Indicador marcado para eliminar</div>
+              </div>
 
-            <div class="chart-card center">
-                <h3>Distribución de Prioridad</h3>
-                <div class="css-pie"></div>
-                <div class="pie-legend">
-                    <span><i style="background: #FF5722;"></i> Alta</span>
-                    <span><i style="background: #FF9800;"></i> Media</span>
-                    <span><i style="background: #FFCC80;"></i> Baja</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+              <div class="delete-item">
+                  <input type="checkbox" id="del-2" class="hide-check">
+                  <div class="item-content">
+                      <div class="item-info">
+                          <span class="item-name">Finca Galeón</span>
+                          <span class="item-area">Diseño</span>
+                      </div>
+                      <label for="del-2" class="btn-trash">Eliminar</label>
+                  </div>
+                  <div class="delete-msg">Indicador marcado para eliminar</div>
+              </div>
+
+              <div class="delete-item">
+                  <input type="checkbox" id="del-3" class="hide-check">
+                  <div class="item-content">
+                      <div class="item-info">
+                          <span class="item-name">Colegios Privados</span>
+                          <span class="item-area">Developers</span>
+                      </div>
+                      <label for="del-3" class="btn-trash">Eliminar</label>
+                  </div>
+                  <div class="delete-msg">Indicador marcado para eliminar</div>
+              </div>
+          </div>
+          
+      </div>
+  </div>
 
 
-<div id="seccion-ayuda" class="help-overlay">
-    <div class="help-container">
-        <div class="help-header">
-            <h1>Centro de Ayuda</h1>
-            <a href="#" class="btn-close-help">&times;</a>
-        </div>
-
-        <div class="search-box">
-            <input type="text" placeholder="¿En qué podemos ayudarte?">
-        </div>
-
-        <div class="faq-list">
-            
-            <div class="faq-item">
-                <input type="checkbox" id="faq-1" class="faq-toggle">
-                <label for="faq-1" class="faq-question">
-                    ¿Cómo puedo añadir un nuevo indicador?
-                    <span class="faq-icon">+</span>
-                </label>
-                <div class="faq-answer">
-                    <p>Para añadir un indicador, haz clic en el botón naranja <strong>"+ Añadir"</strong> en la barra superior. Se abrirá un formulario donde podrás ingresar el nombre, descripción, fechas y área responsable.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <input type="checkbox" id="faq-2" class="faq-toggle">
-                <label for="faq-2" class="faq-question">
-                    ¿Qué significan los colores en la columna Cumplimiento?
-                    <span class="faq-icon">+</span>
-                </label>
-                <div class="faq-answer">
-                    <p>Los colores representan el estado de avance: 
-                        <br>• <span style="color: #4CAF50;">Verde</span>: Cumplimiento óptimo (80% - 100%).
-                        <br>• <span style="color: #FF9800;">Naranja</span>: En progreso (50% - 79%).
-                        <br>• <span style="color: #f44336;">Rojo</span>: Atención requerida (menos del 50%).
-                    </p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <input type="checkbox" id="faq-3" class="faq-toggle">
-                <label for="faq-3" class="faq-question">
-                    ¿Cómo exportar el reporte a PDF?
-                    <span class="faq-icon">+</span>
-                </label>
-                <div class="faq-answer">
-                    <p>Ve a la sección <strong>"Reportar"</strong> en el menú superior. Allí encontrarás un botón blanco con borde naranja que dice "Exportar PDF" en la esquina superior derecha.</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="help-footer">
-            <p>¿No encontraste lo que buscabas? <a href="mailto:soporte@tuweb.com">Contactar a soporte</a></p>
-        </div>
-    </div>
-</div>
-
-
-</body>
-</html>
+  </body>
+  </html>
