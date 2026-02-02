@@ -11,9 +11,9 @@
 
       <header class="encabezado-superior">
       <div class="encabezado-izquierdo">
-          <a href="#modal-add" class="item-navegacion naranja"><img src="/img/Group 3.svg" alt="">Añadir</a>
+          <a href="#añadir" class="item-navegacion naranja"><img src="/img/Group 3.svg" alt="">Añadir</a>
           <a href="#" class="item-navegacion naranja"><img src="/img/Icon open-reload.svg" alt=""> Refrescar</a>
-          <a href="#seccion-eliminar" class="item-navegacion naranja"><img src="/img/Icon material-delete-forever.svg" alt=""> Eliminar</a>
+          <a href="#eliminar" class="item-navegacion naranja"><img src="/img/Icon material-delete-forever.svg" alt=""> Eliminar</a>
       </div>
 
     <div class="encabezado-centro">
@@ -41,57 +41,75 @@
       </p>
     </section>
 
-      <section class="tabla-indicadores">
+    <section class="tabla-indicadores">
+        <div class="fila-tabla encabezado">
+            <div class="columna columna-indicador">Indicador</div>
+            <div class="columna columna-descripcion">Descripción</div>
+            <div class="columna columna-categoria">Categoría</div>
+            <div class="columna columna-fecha">Fecha de Inicio</div>
+            <div class="columna columna-fecha">Fecha de Terminación</div>
+            <div class="columna columna-formula">Fórmula</div>
+            <div class="columna columna-frecuencia">Frecuencia</div>
+            <div class="columna columna-cumplimiento centrado">Cumplimiento</div>
+            <div class="columna columna-area centrado">Área</div>
+            <div class="columna columna-menu"></div>
+        </div>
 
-      <div class="fila-tabla encabezado">
-          <div class="columna columna-indicador">Indicador</div>
-          <div class="columna columna-descripcion">Descripción</div>
-          <div class="columna columna-categoria">Categoría</div>
-          <div class="columna columna-fecha">Fecha de Inicio</div>
-          <div class="columna columna-fecha">Fecha de Terminación</div>
-          <div class="columna columna-formula">Fórmula</div>
-          <div class="columna columna-frecuencia">Frecuencia</div>
-          <div class="columna columna-cumplimiento centrado">Cumplimiento</div>
-          <div class="columna columna-area centrado">Área</div>
-          <div class="columna columna-menu"></div>
-      </div>
+        <div class="fila-tabla tarjeta-indicador">
+            <div class="columna columna-indicador">Modelado 3D</div>
+            <div class="columna columna-descripcion texto-cortado">Interés por dise........</div>
+            <div class="columna columna-categoria">Baja</div>
+            <div class="columna columna-fecha">12/05/21</div>
+            <div class="columna columna-fecha">12/12/21</div>
+            <div class="columna columna-formula">Met.Ágil</div>
+            <div class="columna columna-frecuencia">1/4</div>
+            <div class="columna columna-cumplimiento centrado">
+            <div class="anillo-progreso anillo-rojo p-31">
+                <span class="texto-anillo">31%</span>
+            </div>
+            </div>
+            <div class="columna columna-area centrado">Marketing</div>
+            <a href=""><img src="/img/Repeat Grid 5.svg" alt=""></a>
+        </div>
 
-      <div class="fila-tabla tarjeta-indicador">
-          <div class="columna columna-indicador">Modelado 3D</div>
-          <div class="columna columna-descripcion texto-cortado">Interés por dise........</div>
-          <div class="columna columna-categoria">Baja</div>
-          <div class="columna columna-fecha">12/05/21</div>
-          <div class="columna columna-fecha">12/12/21</div>
-          <div class="columna columna-formula">Met.Ágil</div>
-          <div class="columna columna-frecuencia">1/4</div>
-          <div class="columna columna-cumplimiento centrado">
-          <div class="anillo-progreso anillo-rojo p-31">
-              <span class="texto-anillo">31%</span>
-          </div>
-          </div>
-          <div class="columna columna-area centrado">Marketing</div>
-          <div class="columna columna-menu"><i class="fas fa-bars icono-menu"></i></div>
-      </div>
+        <div class="fila-tabla tarjeta-indicador">
+            <div class="columna columna-indicador">Finca Galeon</div>
+            <div class="columna columna-descripcion texto-cortado">Diseño de parque.....</div>
+            <div class="columna columna-categoria">Baja</div>
+            <div class="columna columna-fecha">12/04/21</div>
+            <div class="columna columna-fecha">12/05/21</div>
 
-      <div class="fila-tabla tarjeta-indicador">
-          <div class="columna columna-indicador">Modelado 3D</div>
-          <div class="columna columna-descripcion texto-cortado">Interés por dise........</div>
-          <div class="columna columna-categoria">Baja</div>
-          <div class="columna columna-fecha">12/05/21</div>
-          <div class="columna columna-fecha">12/12/21</div>
-          <div class="columna columna-formula">Met.Ágil</div>
-          <div class="columna columna-frecuencia">1/4</div>
-          <div class="columna columna-cumplimiento centrado">
-          <div class="anillo-progreso anillo-rojo p-31">
-              <span class="texto-anillo">31%</span>
-          </div>
-          </div>
-          <div class="columna columna-area centrado">Marketing</div>
-          <div class="columna columna-menu"><i class="fas fa-bars icono-menu"></i></div>
-      </div>
+            <div class="columna columna-formula">Met.Ágil</div>
+            <div class="columna columna-frecuencia">1/4</div>
+            <div class="columna columna-cumplimiento centrado">
+            <div class="anillo-progreso anillo-rojo p-31">
+                <span class="texto-anillo">25%</span>
+            </div>
+            </div>
+            <div class="columna columna-area centrado">Diseño</div>
+            <a href=""><img src="/img/Repeat Grid 5.svg" alt=""></a>
+        </div>
 
-      <!-- Las demás filas siguen exactamente el mismo patrón -->
-      </section>
+        <div class="fila-tabla tarjeta-indicador">
+            <div class="columna columna-indicador">Finca Galeon</div>
+            <div class="columna columna-descripcion texto-cortado">Diseño de parque.....</div>
+            <div class="columna columna-categoria">Baja</div>
+            <div class="columna columna-fecha">12/04/21</div>
+            <div class="columna columna-fecha">12/05/21</div>
+
+            <div class="columna columna-formula">Met.Ágil</div>
+            <div class="columna columna-frecuencia">1/4</div>
+            <div class="columna columna-cumplimiento centrado">
+            <div class="anillo-progreso anillo-rojo p-31">
+                <span class="texto-anillo">25%</span>
+            </div>
+            </div>
+            <div class="columna columna-area centrado">Diseño</div>
+            <a href=""><img src="/img/Repeat Grid 5.svg" alt=""></a>
+        </div>
+
+
+    </section>
 
     <div class="accion-footer">
       <button class="boton-principal-grande">Añadir Elementos</button>
@@ -99,9 +117,9 @@
 
   </main>
 
-  <!-- SECCION DE VENTANAS -->
+                                                    <!-- SECCION DE VENTANAS -->
 
-  <div id="modal-add" class="modal-container">
+  <div id="añadir" class="modal-container">
       <a href="#" class="modal-close-overlay"></a> <div class="modal-card">
           <div class="modal-header">
               <h2>Añadir Nuevo Indicador</h2>
@@ -293,57 +311,34 @@
 
   <!--SECCION DE ELIMINAR--> 
 
-  <div id="seccion-eliminar" class="delete-overlay">
-      <div class="delete-container">
-          <div class="delete-header">
-              <div>
-                  <h1>Gestión de Indicadores</h1>
-                  <p>Selecciona los elementos que deseas dar de baja del panel.</p>
-              </div>
-              <a href="#" class="btn-close">&times;</a>
-          </div>
-
-          <div class="delete-list">
-              <div class="delete-item">
-                  <input type="checkbox" id="del-1" class="hide-check">
-                  <div class="item-content">
-                      <div class="item-info">
-                          <span class="item-name">Modelado 3D</span>
-                          <span class="item-area">Marketing</span>
-                      </div>
-                      <label for="del-1" class="btn-trash">Eliminar</label>
-                  </div>
-                  <div class="delete-msg">Indicador marcado para eliminar</div>
-              </div>
-
-              <div class="delete-item">
-                  <input type="checkbox" id="del-2" class="hide-check">
-                  <div class="item-content">
-                      <div class="item-info">
-                          <span class="item-name">Finca Galeón</span>
-                          <span class="item-area">Diseño</span>
-                      </div>
-                      <label for="del-2" class="btn-trash">Eliminar</label>
-                  </div>
-                  <div class="delete-msg">Indicador marcado para eliminar</div>
-              </div>
-
-              <div class="delete-item">
-                  <input type="checkbox" id="del-3" class="hide-check">
-                  <div class="item-content">
-                      <div class="item-info">
-                          <span class="item-name">Colegios Privados</span>
-                          <span class="item-area">Developers</span>
-                      </div>
-                      <label for="del-3" class="btn-trash">Eliminar</label>
-                  </div>
-                  <div class="delete-msg">Indicador marcado para eliminar</div>
-              </div>
-          </div>
-          
+  <div id="eliminar" class="delete-modal-wrapper">
+    <!-- Capa para cerrar al hacer click fuera -->
+    <a href="#" class="delete-modal-overlay"></a>
+  
+    <div class="delete-modal-card">
+      <div class="delete-modal-header">
+        <h2>Eliminar Indicador</h2>
+        <a href="#" class="delete-modal-close">&times;</a>
       </div>
+  
+      <p class="delete-warning">
+        Escribe el nombre exacto del indicador que deseas eliminar.
+        Esta acción no se puede deshacer.
+      </p>
+  
+      <div class="delete-form-group">
+        <label for="delete-name">Nombre del indicador</label>
+        <input type="text" id="delete-name" placeholder="Ej. Modelado 3D"/>
+      </div>
+  
+      <div class="delete-modal-footer">
+        <button class="btn-delete-confirm">
+          Eliminar definitivamente
+        </button>
+      </div>
+    </div>
   </div>
-
+  
 
   </body>
   </html>

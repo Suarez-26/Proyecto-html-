@@ -580,112 +580,251 @@ a {
 
 .help-footer a { color: #FF5722; text-decoration: none; font-weight: bold; }
 
+
 /*SECCION DE ELIMINAR */
+/* --- LÓGICA DEL MODAL (SIN JS) --- */
+.delete-modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 
-/* Overlay principal */
-.delete-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #ffffff; /* Fondo oscuro para diferenciar la "Zona de Peligro" */
-    z-index: 4000;
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.3s;
-    color: rgb(0, 0, 0);
+  /* Estado inicial */
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
 }
 
-.delete-overlay:target {
-    visibility: visible;
-    opacity: 1;
+/* Cuando el modal es target */
+.delete-modal-wrapper:target {
+  visibility: visible;
+  opacity: 1;
 }
 
-.delete-container {
-    max-width: 700px;
-    margin: 60px auto;
-    padding: 0 20px;
+/* --- TARJETA --- */
+.delete-modal-card {
+  background: #ffffff;
+  width: 90%;
+  max-width: 550px;
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  position: relative;
 }
 
-.delete-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px;
+/* --- HEADER --- */
+.delete-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.btn-close {
-    text-decoration: none;
-    font-size: 2rem;
-    color: #999;
-    transition: color 0.2s;
+.delete-modal-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
 }
 
-.btn-close:hover { color: #FF5722; }
-
-/* Lista de eliminación */
-.delete-item {
-    background: #ffffff;
-    margin-bottom: 15px;
-    border-radius: 15px;
-    overflow: hidden;
-    position: relative;
-    border-left: 5px solid #ff5500; /* Línea roja de peligro */
+.delete-modal-close {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #999;
+  transition: color 0.2s;
 }
 
-.item-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.delete-modal-close:hover {
+  color: #ff5500;
+}
+
+/* --- TEXTO WARNING --- */
+.delete-warning {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* --- FORMULARIO --- */
+.delete-form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.delete-form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.delete-form-group input {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.delete-form-group input:focus {
+  border-color: #ff5500;
+}
+
+/* --- FOOTER --- */
+.delete-modal-footer {
+  margin-top: 25px;
+  text-align: center;
+}
+
+/* --- BOTÓN ELIMINAR --- */
+.btn-delete-confirm {
+  width: 100%;
+  background-color: #ff5500;
+  color: #fff;
+  border: none;
+  padding: 14px 40px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.btn-delete-confirm:hover {
+  background-color: #e04a00;
+  transform: translateY(-2px);
+}
+
+/* --- OVERLAY PARA CERRAR --- */
+.delete-modal-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* -------- TABLET -------- */
+@media (max-width: 1024px) {
+
+  .encabezado-superior {
+    padding: 15px 20px;
+  }
+
+  .encabezado-izquierdo,
+  .encabezado-derecho {
+    gap: 15px;
+  }
+
+  .tabla-indicadores {
+    gap: 20px;
+  }
+
+  .fila-tabla.tarjeta-indicador {
+    height: auto;
     padding: 20px;
-    transition: transform 0.3s;
+    flex-wrap: wrap;
+  }
+
 }
 
-.item-name { display: block; font-weight: bold; font-size: 1.1rem; }
-.item-area { font-size: 0.8rem; color: #aaa; }
+/* -------- MOBILE -------- */
+@media (max-width: 768px) {
 
-.btn-trash {
-    background: #ff5500;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: bold;
-}
-
-/* Lógica de Simulación de Borrado */
-.hide-check { display: none; }
-
-.delete-msg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ff5500;
-    font-weight: bold;
-    transform: translateY(100%);
-    transition: transform 0.3s;
-}
-
-/* Cuando se marca el checkbox, el mensaje sube y el contenido se oculta */
-.hide-check:checked ~ .item-content {
-    transform: translateY(-100%);
-    opacity: 0;
-}
-
-.hide-check:checked ~ .delete-msg {
-    transform: translateY(0);
-}
-
-.delete-footer {
+  /* HEADER */
+  .encabezado-superior {
+    flex-direction: column;
+    gap: 15px;
     text-align: center;
-    margin-top: 30px;
-    color: #666;
+  }
+
+  .encabezado-izquierdo,
+  .encabezado-derecho {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .encabezado-centro {
+    order: -1;
+  }
+
+  /* TABLA -> TARJETAS */
+  .fila-tabla.encabezado {
+    display: none;
+  }
+
+  .fila-tabla.tarjeta-indicador {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    height: auto;
+  }
+
+  .columna {
+    flex: 100%;
+    padding: 0;
+    font-size: 14px;
+  }
+
+  .columna::before {
+    content: attr(data-label);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--texto-claro);
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .columna-cumplimiento,
+  .columna-area {
+    text-align: left;
+  }
+
+  .anillo-progreso {
+    margin: 0;
+  }
+
+  .columna-menu {
+    align-self: flex-end;
+  }
+
+  /* BOTÓN */
+  .boton-principal-grande {
+    width: 100%;
+    padding: 15px;
+  }
+
+  /* REPORTES */
+  .kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* -------- MOBILE PEQUEÑO -------- */
+@media (max-width: 480px) {
+
+  .seccion-titulo h1 {
+    font-size: 22px;
+  }
+
+  .subtitulo {
+    font-size: 14px;
+  }
+
+  .modal-card,
+  .delete-modal-card {
+    padding: 20px;
+  }
 }
