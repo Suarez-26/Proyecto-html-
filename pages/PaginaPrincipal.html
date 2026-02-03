@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/Eliminar.css">
     <link rel="stylesheet" href="/css/Reportes.css">
     <link rel="stylesheet" href="/css/Ayuda.css">
+    <link rel="stylesheet" href="/css/Perfil.css">
 </head>
 <body>
 
@@ -31,7 +32,7 @@
       <div class="acciones-usuario">
         <a href="#"><i class="fas fa-cog"></i></a>
         <a href="#"><i class="fas fa-bell"></i></a>
-        <img src="/img/pp@2x.png" alt="User Profile" class="avatar-usuario">
+        <a href="#perfil"><img src="/img/pp@2x.png" alt="User Profile" class="avatar-usuario"> </a>
       </div>
     </div>
   </header>
@@ -406,6 +407,53 @@
     </div>
 </div>
 
+            <!-- PERFIL DE ADMIN  -->
+
+    <div id="perfil" class="profile-overlay">
+        <a href="#" class="profile-close-x"></a>
+        <div class="profile-card">
+            <!-- Cabecera -->
+            <div class="profile-header">
+                <div class="profile-avatar-large">
+                    <img src="/img/pp@2x.png" alt="Admin">
+                    <span class="status-badge"></span>
+                </div>
+                <h2>Mi Perfil</h2>
+                <span class="admin-badge">Administrador</span>
+            </div>
+    
+            <!-- Cuerpo -->
+            <div class="info-grid">
+                <div class="info-item">
+                    <label>Correo Electrónico</label>
+                    <span>juan.admin@empresa.com</span>
+                </div>
+                <div class="info-item">
+                    <label>Teléfono</label>
+                    <span>+57 300 123 4567</span>
+                </div>
+            </div>
+    
+            <div class="info-item" style="margin-bottom: 20px;">
+                <label>Dirección de Residencia</label>
+                <span>Calle 123 #45-67, Floridablanca</span>
+            </div>
+    
+            <div class="admin-permissions">
+                <h3>Información Adicional</h3>
+                <ul>
+                    <li>Acceso total al panel de indicadores y gestión de reportes trimestrales.</li>
+                </ul>
+            </div>
+    
+            <!-- Pie / Botones -->
+            <div class="profile-footer">
+                <button class="btn-edit-profile">Editar Perfil</button>
+                <a href="#" class="btn-logout">Cerrar Sesión</a>
+            </div>
+        </div>
+    </div>
+            
   
 
   </body>
