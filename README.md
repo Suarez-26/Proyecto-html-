@@ -6,7 +6,7 @@ Este repositorio contiene la maqueta estática para el sitio web corporativo de 
 
 Puedes ver la maqueta desplegada en el siguiente enlace:
 
-[**Ver KAIRO MEDIA en vivo**](https://github.com/PaulaV09/LuxTime.git)
+[**Ver KAIRO MEDIA en vivo**](https://playful-torte-fe1af3.netlify.app/)
 
 ## Contexto del Proyecto
 
