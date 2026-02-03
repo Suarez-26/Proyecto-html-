@@ -6,7 +6,7 @@ Este repositorio contiene la maqueta estática para el sitio web corporativo de 
 
 Puedes ver la maqueta desplegada en el siguiente enlace:
 
-[**Ver KAIRO MEDIA en vivo**](https://playful-torte-fe1af3.netlify.app/)
+[**Ver KAIRO MEDIA en vivo**](https://genuine-piroshki-5cf494.netlify.app/)
 
 ## Contexto del Proyecto
 
@@ -31,7 +31,7 @@ El enfoque principal se centró en:
 
 La planificación visual del proyecto se basó en los siguientes wireframes, que definieron la estructura y la experiencia de usuario para cada página clave.
 
-
+[**Ver wireframes**](https://www.figma.com/site/qq1tcQl7Po6jTLkuMQ3hGe/Proyecto-html?node-id=0-1&p=f&t=wzCtMaqPbzswcIUM-0)
 
 ## 🛠️ Tecnologías Utilizadas
 
