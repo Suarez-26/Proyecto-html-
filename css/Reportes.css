@@ -1,0 +1,115 @@
+                    /* REPORTES*/
+
+/* ---- Estructura del Overlay de Reporte ----*/
+.reporte-superposicion {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f4f7f6; /* Fondo gris muy claro como la web */
+    z-index: 2000;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.reporte-superposicion:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.reporte-contenedor {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Cabecera */
+.reporte-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.btn-exportar {
+    background: white;
+    border: 2px solid #FF5722;
+    color: #FF5722;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-cerrar-reporte {
+    font-size: 40px;
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px;
+}
+
+/* KPIs */
+.kpi-cuadricula {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.kpi-tarjeta {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.kpi-titulo { display: block; color: #777; font-size: 0.9rem; margin-bottom: 10px; }
+.kpi-valor { font-size: 2rem; font-weight: bold; }
+.kpi-valor.naranja { color: #FF5722; }
+
+/* Gráficos */
+.graficos-cuadricula {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 20px;
+}
+
+.grafico-tarjeta {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.grafico-tarjeta.centrado { text-align: center; }
+
+/* Gráfico de Barras CSS */
+.elemento-barra { margin-bottom: 15px; }
+.elemento-barra label { display: block; margin-bottom: 5px; font-size: 0.85rem; }
+.contenedor-barra { background: #eee; border-radius: 10px; height: 25px; overflow: hidden; }
+.relleno-barra { 
+    background: #FF5722; 
+    height: 100%; 
+    color: white; 
+    font-size: 0.7rem; 
+    display: flex; 
+    align-items: center; 
+    padding-left: 10px;
+}
+
+/* Gráfico Circular (Pie Chart) solo con CSS */
+.grafico-circular {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #FF5722 0% 40%,      /* Alta: 40% */
+        #FF9800 40% 75%,     /* Media: 35% */
+        #FFCC80 75% 100%     /* Baja: 25% */
+    );
+    margin: 20px auto;
+}
