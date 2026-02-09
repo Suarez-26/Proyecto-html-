@@ -6,7 +6,7 @@ Este repositorio contiene la maqueta estática para el sitio web corporativo de 
 
 Puedes ver la maqueta desplegada en el siguiente enlace:
 
-[**Ver KAIRO MEDIA en vivo**](https://classy-malabi-c909e6.netlify.app/)
+[**Ver KAIRO MEDIA en vivo**](https://radiant-arithmetic-f38c19.netlify.app/)
 
 ## Contexto del Proyecto
 
