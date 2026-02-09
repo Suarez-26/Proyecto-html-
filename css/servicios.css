@@ -5,38 +5,29 @@
     align-items: center;
     justify-self: center;
     overflow-x: auto;
-    background: linear-gradient(rgb(243, 139, 69), rgb(190, 58, 6));
+    border-spacing: 0px;
 }
 
 
 .table__header--basic {
-    border: 3px solid black;
     max-width: 30px;
     font-size: 4vh;
     font-style: oblique;
-    box-shadow: rgb(189, 83, 12) 5px 5px 2px ;
-    background-color: rgba(228, 150, 33, 0.479);
     color: rgb(87, 0, 0);
 
 }
 
 .table__header--pro {
-    border: 3px solid black;
     max-width: 30px;
     font-size: 4vh;
     font-style: oblique;
-    box-shadow: rgb(189, 83, 12) 5px 5px 2px ;
-    background-color: rgba(228, 150, 33, 0.479);
     color: rgb(87, 0, 0);
 }
 
 .table__header--premiun {
-    border: 3px solid black;
     max-width: 30px;
     font-size: 4vh;
     font-style: oblique;
-    box-shadow: rgb(189, 83, 12) 5px 5px 2px ;
-    background-color: rgba(228, 150, 33, 0.479);
     color: rgb(87, 0, 0);
 }
 
@@ -58,11 +49,29 @@
 }
 .table__row--1detail td {
     text-align: center;
-    border-bottom: 2.5px solid black;
 }
 
 td {
-    border-left: 2.5px dashed black;
-    border-right: 2.5px dashed black;
     color: black;
+}
+
+.table th:nth-child(1) {
+    background-color: rgb(252, 163, 112);
+    border-radius: 20px 0px 0px 0px;
+}
+.table td:nth-child(1) {
+    background-color: rgba(206, 204, 204, 0.418);
+}
+.table th:nth-child(2) {
+    background-color: rgb(252, 142, 78);
+}
+.table td:nth-child(2) {
+    background-color: rgba(206, 204, 204, 0.705);
+}
+.table th:nth-child(3) {
+    background-color: rgb(252, 163, 112);
+    border-radius: 0px 20px 0px 0px;
+}
+.table td:nth-child(3) {
+    background-color: rgba(206, 204, 204, 0.418);
 }
