@@ -1,0 +1,68 @@
+.table {
+    width: 90%;
+    height: 20cm;
+    margin: 5% 5% 0% 5%;
+    align-items: center;
+    justify-self: center;
+    overflow-x: auto;
+    background: linear-gradient(rgb(243, 139, 69), rgb(190, 58, 6));
+}
+
+
+.table__header--basic {
+    border: 3px solid black;
+    max-width: 30px;
+    font-size: 4vh;
+    font-style: oblique;
+    box-shadow: rgb(189, 83, 12) 5px 5px 2px ;
+    background-color: rgba(228, 150, 33, 0.479);
+    color: rgb(87, 0, 0);
+
+}
+
+.table__header--pro {
+    border: 3px solid black;
+    max-width: 30px;
+    font-size: 4vh;
+    font-style: oblique;
+    box-shadow: rgb(189, 83, 12) 5px 5px 2px ;
+    background-color: rgba(228, 150, 33, 0.479);
+    color: rgb(87, 0, 0);
+}
+
+.table__header--premiun {
+    border: 3px solid black;
+    max-width: 30px;
+    font-size: 4vh;
+    font-style: oblique;
+    box-shadow: rgb(189, 83, 12) 5px 5px 2px ;
+    background-color: rgba(228, 150, 33, 0.479);
+    color: rgb(87, 0, 0);
+}
+
+.table__1row--price {
+    text-align: center;
+    padding-bottom: 3%;
+    font-size: 25px;
+    font-style: italic;
+}
+.table__2row--details {
+    text-align: center;
+    padding-bottom: 3%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+
+.table__row--detail {
+    text-align: center;
+}
+.table__row--1detail td {
+    text-align: center;
+    border-bottom: 2.5px solid black;
+}
+
+td {
+    border-left: 2.5px dashed black;
+    border-right: 2.5px dashed black;
+    color: black;
+}
