@@ -5,6 +5,7 @@
     gap: 20px;
     padding: 20px;
 }
+
 .seccion-equipo h2 {
     text-align: center;
     margin-bottom: 30px;
@@ -14,11 +15,12 @@
 
 /* La Tarjeta */
 .equipo-tarjeta {
-    position: relative; /* Necesario para que la info se posicione respecto a la tarjeta */
+    position: relative;
     border-radius: 12px;
-    overflow: hidden; /* Corta la imagen si sobresale de los bordes redondeados */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(87, 83, 83, 0.1);
     height: 400px;
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Ajuste de Imagen */
@@ -38,14 +40,25 @@
     padding: 20px;
     box-sizing: border-box;
     
-    /* Degradado para asegurar contraste (Legibilidad) */
+
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
     color: white;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out; /* Transición suave */
 }
 
+/* Animación al hacer hover en la tarjeta */
+.equipo-tarjeta:hover .equipo-info {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Nombre y Rol */
 .equipo-nombre {
     margin: 0;
     font-size: 1.4rem;
+    color: #FF5722;
 }
 
 .equipo-rol {
@@ -53,11 +66,17 @@
     font-weight: 300;
     font-size: 1rem;
     opacity: 0.9;
+    color: #FF5722;
+}
+
+/* Efecto de Hover en la tarjeta */
+.equipo-tarjeta:hover {
+    transform: scale(1.05);
 }
 
 /* Vista Móvil (Media Query) */
 @media (max-width: 600px) {
     .equipo-cuadricula {
-        grid-template-columns: 1fr; /* Una sola columna en celulares */
+        grid-template-columns: 1fr;
     }
 }
