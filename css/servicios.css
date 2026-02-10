@@ -75,3 +75,24 @@ td {
 .table td:nth-child(3) {
     background-color: rgba(206, 204, 204, 0.418);
 }
+.table__row--1detail td:nth-child(1) {
+    border-radius: 0px 0px 0px 20px;
+}
+.table__row--1detail td:nth-child(3) {
+    border-radius: 0px 0px 20px 0px;
+}
+
+@media(max-width: 600px ) {
+    .table {
+        width: 30vw;
+    }
+    .table__header--basic {
+        font-size: 10px;
+    }
+    .table__header--pro {
+        font-size: 10px;
+    }
+    .table__header--premiun {
+        font-size: 10px;
+    }
+}
