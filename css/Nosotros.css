@@ -1,0 +1,101 @@
+/* Contenedor Principal */
+.equipo-cuadricula {
+    display: grid;
+    /* Forzamos 3 columnas de igual tamaño en escritorio */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; /* Un poco más de espacio para profesionalismo */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.seccion-equipo h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #FF5722;
+}
+
+
+.tarjeta-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* La Tarjeta */
+.equipo-tarjeta {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    height: 400px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+
+.equipo-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* El Contenedor de Texto (Overlay) - ESTADO INICIAL */
+.equipo-info {
+    position: absolute;
+    bottom: -100%; 
+    left: 0;
+    width: 100%;
+    height: 40%;
+    padding: 20px;
+    box-sizing: border-box;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.95));
+    color: white;
+    transition: all 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* --- MAGIA DEL OPERADOR :TARGET --- */
+
+.equipo-tarjeta:target .equipo-info {
+    bottom: 0; /* Sube la información */
+}
+
+.equipo-tarjeta:target {
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 25px rgba(255, 87, 34, 0.3); 
+}
+
+/* Nombre y Rol */
+.equipo-nombre {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #FF5722; /* Mantenemos tu color naranja */
+}
+
+.equipo-rol {
+    margin: 5px 0 0;
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: #ffffff; 
+}
+
+
+
+/* Vista Móvil (Media Query) */
+@media (max-width: 900px) {
+    .equipo-cuadricula {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 600px) {
+    .equipo-cuadricula {
+        grid-template-columns: 1fr; 
+    }
+}
+
